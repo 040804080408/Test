@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Meine einfache Website</title>
+</head>
+<body>
+    <h1>Statistik test1</h1>
+    <p>Arbeitsverzeichnins:
+    setwd("I:/datenanalyse/daten") (Achtung:I ändert sich je nach Verlauf) 
+    load("I:/datenanalyse/daten/mietspiegel.rda")
+
+    Alle Objekte im Arbeitsspeicher entfernen:
+    rm(list = ls())
+    
+    Variablen klassifizieren: 
+    stetig: Stetige Variabeln sind jene beliebige WErte, di innerhalb eines 
+    Intervalls als Ausprägung möglich sind 
+    z.B. Körpergröße, Dollar/Eurokurs, Einkommen;
+    
+    diskrete Variablen; Eine Variable ist diskret, wenn sie nur endlich viele Werte besitzt 
+    oder wenn zwar beliebig viele Werte möglich sind, diese aber abzählbar sind. 
+    z.B. Geschlecht, Schulausbildung, Bewertungsskala; 
+
+    Bestimmung der Skalenniveaus
+    Skalenniveau kann vereinfacht ausgedrückt beschreiben, wie "gut" die Werte einer Variable in 
+    Zahlen ausgedrückt werden kann und wie weit diese Sinnhaft sind. 
+    
+    Nominalskala: Eine Variable heißt nominalskaliert, wenn ihre Werte nicht in eine Rangordung gebracht 
+    werden können. Nominalskalierte Werte sind diskret. 
+    z.B. Geschlecht, Farbe, Religion; 
+    Ordinalskala: Die Werte können in eine Rangordung gebracht werden. Ordinalskalierte Werte sind auch 
+    diskret. 
+    z.B. Schulnoten, Schulbildung, Beurteilungsskala; 
+
+    Metrisches Merkmal: Bei metrischen Merkmalen sind die Mermalsausprägungen Zahlen im eigenrlichen Sinn. 
+    Damit könnnen die Ausprägungen nicht nur geordnet, sondern auch Abstände gebildet und interpretiert werden. Stetige 
+    Variablen sind immer Metrisch.
+    Intervallskala: Zwischen Merkmale können Abstände gebildet werden, es gibt aber keinen sinnvollen Nullpunkt
+    z.B. Temperatur
+    Verhältnisskala: es gibt einen sinnvollen Nullpunkt 
+
+    R codes: 
+    head(datensatz ohne dem was hinter dem Punkt steht)
+    z.B. head(mietspiegel) - gibt die ersten 6 Reihen an 
+    str(mietspiegel)
+    summary()
+
+    Arithmetisches Mittel 
+    gibt an, welchen Wert ein Merkmal im Durschschnitt annimmt, reagiert stark auf einzelne extreme Beobachtungen, außreiserempfindlich
+    
+    Median
+    Ist das 50% Quantil, Robust gegen Außreiser und das Zentrum der Daten 
+
+    Minimum 
+    Kleineste Beobachtung; kleinster Wert im datensatz
+
+    Maximum 
+    Größte Beobachtung; höchster Wert im Datensatz 
+
+    Empirische Varianz 
+    Durchschnittliche Abweichung der Daten vom Mittelwert 
+    var()
+
+    Standartabweichung
+    Durchschnittliche Streuung um den Mittelwert; ausreißersensintiv
+    sd()
+
+    Graphische Darstellungsmöglichkeiten 
+    stetige Variable: Boxplot oder Histogramm 
+
+    Histogramm
+    gut geeignet zur graphischen Beschreibung von Verteilungen, beurteilung der Schiefe/Symmetrie 
+    Bestimmung des Modus/ der Modalklasse (unimodal,bimodal,multimodal)
+
+    R: 
+    par(mfrow = c(1,2))
+    hist(mietspiegel$miete, xlab = "Miete", ylab = "Dichte", main = "Miete", freq = FALSE)
+
+    xlab=Beschriftung der x-Achse, ylab=Beschriftung der y-Achse, main=Überschrift 
+
+    Boxplot 
+    graphische Darstellung aureißerrobuster Kennzahlen, gut geeignet zum Vergleich von Verteilung
+
+    </p>
+    
+</body>
+</html>
